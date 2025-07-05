@@ -11,7 +11,7 @@
 			isa = PBXAggregateTarget;
 			buildConfigurationList = 5517E8CA263D4737000219EC /* Build configuration list for PBXAggregateTarget "Build and Install PCSX2" */;
 			buildPhases = (
-				5517E8CD263D4758000219EC /* ShellScript */,
+				5517E8CD263D4758000219EC /* Run Script */,
 			);
 			dependencies = (
 				5517E8CF263D4760000219EC /* PBXTargetDependency */,
@@ -7703,8 +7703,11 @@
 		5517E8AC263D4213000219EC /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				BuildIndependentTargetsInParallel = YES;
+				BuildIndependentTargetsInParallel = NO;
 				CLASSPREFIX = PCSX2;
+				KnownAssetTags = (
+					New,
+				);
 				LastUpgradeCheck = 1640;
 				TargetAttributes = {
 					5517E8B3263D4213000219EC = {
@@ -7792,15 +7795,18 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		5517E8CD263D4758000219EC /* ShellScript */ = {
+		5517E8CD263D4758000219EC /* Run Script */ = {
 			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
+			alwaysOutOfDate = 1;
+			buildActionMask = 12;
+			dependencyFile = "$(DERIVED_FILES_DIR)/$(INPUT_FILE_PATH).d";
 			files = (
 			);
 			inputFileListPaths = (
 			);
 			inputPaths = (
 			);
+			name = "Run Script";
 			outputFileListPaths = (
 			);
 			outputPaths = (
